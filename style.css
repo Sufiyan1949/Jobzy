@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
+    /* border: .5px solid rgba(255, 255, 255, 0.541); */
 }
 
 :root {
@@ -21,7 +22,7 @@ body {
     background-color: black;
 }
 
-.container {
+.gradientContainer {
     width: 100%;
     height: 100%;
     min-height: 100%;
@@ -29,15 +30,22 @@ body {
     background: linear-gradient(110deg, rgba(66, 4, 126, 0.8) 0%, rgba(7, 244, 158, 0.5) 100%);
 }
 
-.container .parent {
+.gradientContainer .blackLayer {
     width: 100%;
     height: 100%;
-    overflow-y: auto;
     background: linear-gradient(110deg, rgba(26, 26, 26, .75) 0%, rgba(0, 0, 0, .90) 100%);
     backdrop-filter:
         blur(60px);
 }
 
+.content{
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow-y: auto;
+}
+
+/*Navbar Start*/
 
 .navbar {
     width: 100%;
@@ -98,7 +106,8 @@ body {
     padding-right: 1.5rem;
 }
 
-.navbar .navbarItemContainer .callToActions button {
+.navbar .navbarItemContainer .callToActions button,
+.btn {
     padding: 12px 32px;
     font-weight: 700;
     font-size: 1rem;
@@ -108,7 +117,7 @@ body {
     letter-spacing: 1px;
     border-radius: 50px;
     transition: all 0.3s ease 0s;
-    outline: none;  
+    outline: none;
     background-color: var(--primary);
 }
 
@@ -117,11 +126,150 @@ body {
     transform: scale(.95);
 }
 
+/*Navbar End*/
 
 
+/*Hero Section Start*/
+
+.heroSection {
+    width: 100%;
+    position: relative;
+}
+
+.heroSection .shapesContainer {
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.heroSection .heroContainer {
+    width: 100%;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+}
+
+.heroSection .shapesContainer :first-child {
+    height: auto;
+    max-width: 300px;
+    margin-top: 60px;
+}
+
+.heroSection .shapesContainer :last-child {
+    position: absolute;
+    margin-top: 40px;
+    right: 60px;
+}
+
+.heroSection .heroContainer h1 {
+    height: fit-content;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+    color: var(--color_heading);
+    font-size: 3.3rem;
+    margin: 0 50px;
+    text-align: center;
+}
+
+.heroSection .heroContainer .searchContainer {
+    min-width: 880px;
+    max-width: 100px;
+    display: flex;
+    border: 1.2px solid rgba(255, 255, 255, 0.06);
+    padding: 10px 10px 10px 20px;
+    border-radius: 300px;
+    background: linear-gradient(100deg, rgba(100, 100, 100, 0.3) 0%,
+            rgba(100, 100, 100, 0.15) 56%, rgba(96, 104, 100, 0.3) 100%);
+    backdrop-filter:
+        blur(5px);
+    margin-top: 75px;
+}
+
+.heroSection .heroContainer .searchContainer .inputTitle,
+.heroSection .heroContainer .searchContainer .inputLocation {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.heroSection .heroContainer .searchContainer .inputTitle input[type=text],
+.heroSection .heroContainer .searchContainer .inputLocation input[type=text] {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 6px 12px;
+    color: var(--color_subheading);
+}
+
+.heroSection .heroContainer .searchContainer .inputTitle .box,
+.heroSection .heroContainer .searchContainer .inputLocation .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 32px;
+    height: 32px;
+    background-color: #d9d9d95e;
+    padding: 10px;
+    border-radius: 12px;
+    backdrop-filter:
+        blur(20px)
+}
+
+.heroSection .heroContainer .searchContainer .inputTitle .box img,
+.heroSection .heroContainer .searchContainer .inputLocation .box img {
+    max-width: 16px;
+    max-height: 16px;
+}
+
+.heroSection .heroContainer .searchContainer .divider {
+    width: 2px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 3px 24px;
+}
+
+.heroSection .heroContainer .searchContainer .btn{
+    padding: 16px 44px;
+    font-size: 1.2rem;
+}
+
+.heroSection .heroContainer .searchContainer .btn:hover {
+    box-shadow: 0px 2px 20px rgba(46, 229, 157, 0.4);
+    transform: scale(.95);
+}
+
+/*Hero Section End*/
 
 
+/*Category Section Start*/
 
+.categorySection {
+    width: 100%;
+    border: .5px solid rgba(255, 255, 255, 0.541);
+}
+
+.categorySection .categoryShape img{
+    right: 60px;
+}
+
+.categorySection .categoryShape {
+    width: 100%;
+    display: flex;
+}
+
+.categorySection .categoryContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Category Section End*/
 
 
 
