@@ -9,7 +9,7 @@
 :root {
     --primary: #07F49E;
     --color_heading: rgba(255, 255, 255, 0.9);
-    --color_subheading: rgba(255, 255, 255, 0.5);
+    --color_subheading: rgba(255, 255, 255, 0.7);
 }
 
 html,
@@ -17,8 +17,6 @@ body {
     width: 100%;
     height: 100%;
     min-height: 100dvh;
-    display: flex;
-    justify-content: center;
     background-color: black;
 }
 
@@ -26,21 +24,23 @@ body {
     width: 100%;
     height: 100%;
     min-height: 100%;
-    max-width: 2100px;
     background: linear-gradient(110deg, rgba(66, 4, 126, 0.8) 0%, rgba(7, 244, 158, 0.5) 100%);
 }
 
 .gradientContainer .blackLayer {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
     background: linear-gradient(110deg, rgba(26, 26, 26, .75) 0%, rgba(0, 0, 0, .90) 100%);
     backdrop-filter:
         blur(60px);
 }
 
-.content{
+.content {
     width: 100%;
     height: 100%;
+    max-width: 2100px;
     display: block;
     overflow-y: auto;
 }
@@ -133,6 +133,7 @@ body {
 
 .heroSection {
     width: 100%;
+    height: 100%;
     position: relative;
 }
 
@@ -153,7 +154,6 @@ body {
 }
 
 .heroSection .shapesContainer :first-child {
-    height: auto;
     max-width: 300px;
     margin-top: 60px;
 }
@@ -165,7 +165,6 @@ body {
 }
 
 .heroSection .heroContainer h1 {
-    height: fit-content;
     letter-spacing: 2px;
     word-spacing: 8px;
     color: var(--color_heading);
@@ -232,7 +231,7 @@ body {
     margin: 3px 24px;
 }
 
-.heroSection .heroContainer .searchContainer .btn{
+.heroSection .heroContainer .searchContainer .btn {
     padding: 16px 44px;
     font-size: 1.2rem;
 }
@@ -249,24 +248,48 @@ body {
 
 .categorySection {
     width: 100%;
-    border: .5px solid rgba(255, 255, 255, 0.541);
-}
-
-.categorySection .categoryShape img{
-    right: 60px;
+    height: 100%;
+    position: relative;
 }
 
 .categorySection .categoryShape {
+    position: absolute;
     width: 100%;
-    display: flex;
 }
 
+.categorySection .categoryShape img {
+    position: absolute;
+    top: -140px;
+    right: 0px;
+    max-width: 120px;
+}
+
+
 .categorySection .categoryContent {
+    position: absolute;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.categorySection .categoryContent h2{
+    color: var(--color_heading);
+    letter-spacing: 1.5px;
+    word-spacing: 4px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.categorySection .categoryContent p{
+    color: var(--color_subheading);
+    letter-spacing: .8px;
+    word-spacing: 2px;
+    font-size: 18px;
+    margin-top: 12px;
+    font-weight: 100;
+    text-align: center;
 }
 
 /*Category Section End*/
