@@ -10,8 +10,8 @@
         --primary: #07F49E;
         --color_heading: rgba(255, 255, 255, 0.9);
         --color_subheading: rgba(255, 255, 255, 0.7);
-        --min_height: 600px;
-        --max_height: 1000;
+        --min_height: 800px;
+        --max_height: 2000px;
     }
     
     html,
@@ -170,9 +170,7 @@
     
     .heroSection {
         width: 100%;
-        height: 60%;
         min-height: var(--min_height);
-        max-height: var(--max_height);
         position: relative;
     }
     
@@ -283,9 +281,7 @@
     
     .categorySection {
         width: 100%;
-        height: 60%;
         min-height: var(--min_height);
-        max-height: var(--max_height);
         position: relative;
     }
     
@@ -392,9 +388,7 @@
     
     .popularJobsSection {
         width: 100%;
-        height: 60%;
-        min-height: var(--minx_height);
-        max-height: var(--max_height);
+        min-height: var(--min_height);
         padding: 24px;
         display: flex;
         justify-content: center;
